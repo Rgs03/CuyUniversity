@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- Pure CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <title>Login Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title text-center mb-4">Login</h5>
+          <div class="mb-3">
+            <input
+              type="text"
+              name="username"
+              placeholder="Username"
+              id="usernameInput"
+              class="form-control"
+            />
+          </div>
+          <div class="mb-3">
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              id="passwordInput"
+              class="form-control"
+            />
+          </div>
+          <div class="d-grid">
+            <button onclick="onLogin()" id="loginBtn" class="btn btn-primary">
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+      <button
+        onclick="onLogout()"
+        id="logoutBtn"
+        class="btn btn-secondary mt-3"
+        style="display: none;"
+      >
+        Logout
+      </button>
+      <h1 id="admin" class="text-success">Login Sebagai Admin</h1>
+      <h1 id="basic" class="text-primary">Login Sebagai User</h1>
+    </div>
+
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Pure JS -->
+    <script src="main.js"></script>
+  </body>
+</html>
