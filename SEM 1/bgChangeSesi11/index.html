@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Web Background Changer</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title" id="title">Pilih Menu</div>
+      <div class="box">
+        <div class="circle red"></div>
+        <div class="circle green"></div>
+        <div class="circle blue"></div>
+        <div class="circle black"></div>
+      </div>
+      <button onclick="reset()">Reset</button>
+    </div>
+
+    <script>
+      const title = document.getElementById("title");
+      const circles = document.querySelectorAll(".circle");
+      circles.forEach((circle) => {
+        circle.addEventListener("click", ({ target }) => {
+          const { backgroundColor } = getComputedStyle(target);
+          document.body.style.backgroundColor = backgroundColor;
+          const bgCol = document.body.style.backgroundColor;
+          console.log(bgCol);
+          if (bgCol == "rgb(51, 51, 51)" || bgCol == "rgb(255, 72, 72)") {
+            title.style.color = "#fff";
+          } else {
+            title.style.color = "#000";
+          }
+        });
+      });
+
+      function reset() {
+        document.body.style.backgroundColor = "#fff";
+        title.style.color = "#000";
+      }
+    </script>
+  </body>
+</html>

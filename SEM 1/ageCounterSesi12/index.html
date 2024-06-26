@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      *,
+      body,
+      html {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        border: 1px solid black;
+        margin: 0 auto;
+        padding: 16px;
+        gap: 1.3rem;
+        width: 500px;
+        display: flex;
+        flex-direction: column;
+      }
+      #birthday {
+        padding: 16px;
+        /* background: tomato; */
+        /* color: white; */
+        font-size: 20px;
+        /* border: none; */
+      }
+      #btn {
+        padding: 12px;
+        background-color: #333333;
+        color: #fff;
+        cursor: pointer;
+        font-size: 18pxs;
+      }
+      #btn:hover {
+        background-color: black;
+      }
+      label {
+        font-size: 18px;
+        text-transform: capitalize;
+      }
+    </style>
+    <title>Cek Usia</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Cek Usia Anda</h2>
+      <label for="birthday">Masukkan tahun kelahiran anda: </label>
+      <input type="number" placeholder="Contoh: 1945" id="birthday" />
+      <button id="btn" onclick="checkResult()">Cek Usia</button>
+      <p id="result"></p>
+    </div>
+
+    <script>
+      function checkResult() {
+        const birthday = document.getElementById("birthday").value;
+        const now = new Date().getFullYear();
+        let age = now - birthday;
+        console.log(age);
+        const result = document.getElementById("result");
+        result.innerHTML = `Usia kamu saat ini adalah ${age}`;
+      }
+    </script>
+  </body>
+</html>

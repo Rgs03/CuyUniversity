@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+        height: 100vh;
+        width: 100vw;
+        overflow-x: auto;
+      }
+      #note {
+        /* height: 100vh;
+        width: 100%; */
+        /* background-color: blue; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: flex;
+        flex-wrap: nowrap;
+        padding: 5px;
+      }
+      button {
+        background-color: crimson;
+        color: #eaeaea;
+        margin: 3px;
+        height: 180px;
+        width: 80px;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+      }
+      button:hover {
+        background-color: #5d0303;
+      }
+      @media screen and(min-width: 767px) {
+      }
+    </style>
+    <title>Piano</title>
+  </head>
+  <body>
+    <h3>PIANOKUY</h3>
+    <div id="note"></div>
+
+    <script>
+      const chords = ["a", "c", "d", "e", "f"];
+      const note = document.getElementById("note");
+      chords.forEach((chord) => {
+        const button = document.createElement("button");
+        button.innerText = chord;
+        button.addEventListener("click", () => {
+          const sound = new Audio(`/assets/audio/${chord}.wav`);
+          sound.play();
+        });
+        note.appendChild(button);
+      });
+    </script>
+  </body>
+</html>
