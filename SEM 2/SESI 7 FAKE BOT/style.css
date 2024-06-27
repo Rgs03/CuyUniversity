@@ -1,0 +1,49 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.btn {
+  border: none;
+  background: lightseagreen;
+  font-size: 24px;
+  padding: 16px;
+  margin-left: 10px;
+  margin-top: 10px;
+  height: 60px;
+  color: #222;
+  font-weight: 400;
+}
+
+input {
+  border: none;
+  background-color: #eaeaea;
+  color: #222;
+  padding: 16px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+#ask {
+  font-size: 1.6em;
+  font-weight: 500;
+}
